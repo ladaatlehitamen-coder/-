@@ -80,3 +80,27 @@ max-width:900px;
 margin:auto;
 line-height:35px;
 }
+
+nav{
+display:flex;
+align-items:center;
+gap:25px;
+}
+
+nav a{
+text-decoration:none;
+color:#1e293b;
+font-weight:bold;
+}
+
+.services{
+padding:80px 20px;
+background:#eef4ff;
+text-align:center;
+}
+
+.faq{
+padding:80px 20px;
+background:white;
+text-align:center;
+}
