@@ -103,4 +103,26 @@ text-align:center;
 padding:80px 20px;
 background:white;
 text-align:center;
+
+  .whatsapp-float{
+position:fixed;
+bottom:25px;
+left:25px;
+background:#25D366;
+width:65px;
+height:65px;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:30px;
+text-decoration:none;
+border-radius:50%;
+box-shadow:0 5px 20px rgba(0,0,0,.3);
+z-index:999;
+transition:0.3s;
+}
+
+.whatsapp-float:hover{
+transform:scale(1.1);
+}
 }
