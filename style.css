@@ -126,3 +126,42 @@ transition:0.3s;
 transform:scale(1.1);
 }
 }
+footer{
+background:#0f172a;
+color:white;
+padding:70px 20px;
+text-align:center;
+margin-top:100px;
+}
+
+footer h2{
+font-size:40px;
+}
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+nav{
+flex-direction:column;
+gap:15px;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+.hero h2{
+font-size:24px;
+}
+
+.card{
+width:80%;
+}
+
+.logo{
+height:60px;
+}
+
+}
