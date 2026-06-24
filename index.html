@@ -4,89 +4,184 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ליווי כושר אישי</title>
+<title>מאור פיטנס | שינוי גוף אמיתי</title>
 
 <style>
+
+html{
+scroll-behavior:smooth;
+}
 
 body{
 margin:0;
 font-family:Arial;
-background:#0f0f0f;
+background:#0a0a0a;
 color:white;
 }
 
+/* NAV */
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#111;
+display:flex;
+justify-content:center;
+gap:20px;
+padding:12px;
+z-index:1000;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-size:14px;
+opacity:0.8;
+}
+
+nav a:hover{
+color:#d4af37;
+}
+
+/* HERO */
 .hero{
-padding:100px 20px;
+padding:120px 20px 80px;
 text-align:center;
-background:linear-gradient(135deg,#000,#1a1a1a);
+background:radial-gradient(circle at top,#1a1a1a,#000);
 }
 
 .hero h1{
-font-size:42px;
-margin-bottom:15px;
+font-size:48px;
 color:#d4af37;
 }
 
 .hero p{
-font-size:18px;
-opacity:0.8;
+opacity:0.85;
 }
 
 .btn{
-margin-top:20px;
 display:inline-block;
+margin-top:20px;
 background:#d4af37;
 color:black;
-padding:15px 30px;
+padding:14px 28px;
 border-radius:12px;
-text-decoration:none;
 font-weight:bold;
+text-decoration:none;
 }
 
-.section{
-padding:70px 20px;
+/* STATS */
+.stats{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+padding:40px 20px;
+}
+
+.stat{
 text-align:center;
 }
 
+.stat h2{
+color:#d4af37;
+margin:0;
+}
+
+/* SECTIONS */
+.section{
+padding:80px 20px;
+text-align:center;
+}
+
+h2{
+color:#d4af37;
+margin-bottom:25px;
+}
+
+/* CARDS */
 .cards{
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.card{
+background:#161616;
+padding:20px;
+border-radius:14px;
+width:260px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+/* BEFORE AFTER */
+.ba{
 display:flex;
 gap:15px;
 justify-content:center;
 flex-wrap:wrap;
 }
 
-.card{
-background:#1c1c1c;
+.box{
+background:#111;
 padding:20px;
 border-radius:12px;
-width:250px;
+width:260px;
 }
 
-.highlight{
-color:#d4af37;
-font-weight:bold;
-}
-
+/* TESTIMONIALS */
 .testimonial{
-background:#161616;
-padding:20px;
-margin:10px auto;
+background:#141414;
 max-width:500px;
+margin:10px auto;
+padding:15px;
 border-radius:12px;
 }
 
-.footer-cta{
-position:fixed;
-bottom:0;
-width:100%;
-background:#d4af37;
-text-align:center;
-padding:15px;
+/* FORM */
+form{
+max-width:400px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:10px;
 }
 
-.footer-cta a{
-color:black;
+input,textarea{
+padding:12px;
+border-radius:10px;
+border:none;
+}
+
+button{
+background:#d4af37;
+border:none;
+padding:12px;
+border-radius:10px;
 font-weight:bold;
+cursor:pointer;
+}
+
+/* WHATSAPP POPUP */
+.popup{
+position:fixed;
+bottom:20px;
+left:20px;
+background:#25D366;
+padding:12px 16px;
+border-radius:50px;
+color:white;
+font-weight:bold;
+box-shadow:0 0 10px rgba(0,0,0,0.4);
+}
+
+.popup a{
+color:white;
 text-decoration:none;
 }
 
@@ -95,51 +190,89 @@ text-decoration:none;
 
 <body>
 
-<div class="hero">
-<h1>תתחיל לראות שינוי בגוף שלך</h1>
-<p>ליווי אישי, תוכנית אימונים ותזונה שמותאמת רק לך</p>
-<a class="btn" href="https://wa.me/972524799704">שלח הודעה בוואטסאפ</a>
+<nav>
+<a href="#hero">בית</a>
+<a href="#about">יתרונות</a>
+<a href="#results">תוצאות</a>
+<a href="#contact">יצירת קשר</a>
+</nav>
+
+<div class="hero" id="hero">
+<h1>שינוי גוף אמיתי מתחיל כאן</h1>
+<p>ליווי אישי שמביא אותך לתוצאות תוך שבועות</p>
+<a class="btn" href="https://wa.me/972524799704">התחל עכשיו</a>
 </div>
 
-<div class="section">
-<h2>מה אתה מקבל?</h2>
+<div class="stats">
+<div class="stat">
+<h2>+120</h2>
+<p>מתאמנים</p>
+</div>
+
+<div class="stat">
+<h2>8-12</h2>
+<p>שבועות לשינוי</p>
+</div>
+
+<div class="stat">
+<h2>100%</h2>
+<p>ליווי אישי</p>
+</div>
+</div>
+
+<div class="section" id="about">
+<h2>מה אתה מקבל</h2>
 
 <div class="cards">
 
 <div class="card">
-<h3 class="highlight">תוכנית אימונים</h3>
-<p>מותאמת לרמה שלך ולמטרה שלך</p>
+<h3>אימון אישי</h3>
+<p>תוכנית לפי הגוף שלך והמטרה שלך</p>
 </div>
 
 <div class="card">
-<h3 class="highlight">תזונה מדויקת</h3>
+<h3>תזונה חכמה</h3>
 <p>בלי דיאטות קיצוניות</p>
 </div>
 
 <div class="card">
-<h3 class="highlight">ליווי אישי</h3>
-<p>מעקב ושיפור כל שבוע</p>
+<h3>ליווי צמוד</h3>
+<p>מעקב ושיפור שבועי</p>
 </div>
 
 </div>
 </div>
 
-<div class="section">
-<h2>לקוחות מספרים</h2>
+<div class="section" id="results">
+<h2>לפני / אחרי</h2>
 
-<div class="testimonial">
-"התחלתי לראות שינוי כבר אחרי 3 שבועות"
+<div class="ba">
+<div class="box">
+<p>לפני ❌</p>
+<p>חוסר ביטחון, חוסר מסגרת</p>
 </div>
 
-<div class="testimonial">
-"סוף סוף תוכנית שעובדת באמת"
+<div class="box">
+<p>אחרי 🔥</p>
+<p>גוף חטוב, ביטחון גבוה</p>
+</div>
+</div>
 </div>
 
+<div class="section" id="contact">
+<h2>קבל ייעוץ חינם</h2>
+
+<form action="https://formspree.io/f/YOUR_ID" method="POST">
+<input type="text" name="name" placeholder="שם" required>
+<input type="tel" name="phone" placeholder="טלפון" required>
+<textarea name="msg" placeholder="מה המטרה שלך?"></textarea>
+<button type="submit">שלח</button>
+</form>
 </div>
 
-<div class="footer-cta">
-<a href="https://wa.me/972524799704">🔥 התחל עכשיו ליווי</a>
-</div>
+<a class="popup" href="https://wa.me/972524799704">
+💬 וואטסאפ
+</a>
 
 </body>
 </html>
